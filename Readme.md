@@ -21,6 +21,7 @@ Antes de começar, certifique-se de ter os seguintes softwares instalados em seu
    ```sh
    git clone git@github.com:seu-usuario/qatw-primeira-edicao.git
    cd qatw-primeira-edicao
+
    ```
    
 ## 🐳 Subindo o Ambiente com Docker Compose

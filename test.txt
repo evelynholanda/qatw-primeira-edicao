@@ -1,0 +1,33 @@
+Passos para os testes
+
+1. START SERVIÇOS e DESLIGUE
+docker compose up -d
+docker compose down
+
+
+2. FAZER TEST PLAYWRIGHT
+
+
+3. CONEXAO BANCO
+- Instalar npm i pg-promisse  .............serve para conectar com banco dados sql usando node.js
+- Instalar pasta support e um arquivo db.js e importa o modulo
+- Pegar informações do banco no arquivo docker compose
+- fazer configuração e criar a função do select, delete, insert etc...
+- abrir PGAdmin e fazer as configurações do banco que estao no docker compose
+
+4-Rodar testes
+npx playwright test --ui
+
+5- USANDO PAGE OBJECTS COMO PADRÃO DE PROJETO
+- dentro da raiz criar pasta pages
+- dentro da pasta pages criar novo arquivo chamado LoginPage.js
+- dentro da pasta pages criar novo arquivo chamado DashPage.js
+
+6- CONSUMINDO FILA REDIS
+Não utilizaremos este serviço
+
+7- CRIAR ARQUIVO DOCKERFILE COM AS CONFIGURAÇÕES DO SERVIDOR DO KENJINS
+- COPIAR SCRIPT ARQUIVO SERVIDOR JENKINS
+- ENTRAR http://jenkins-server:8080
+- CRIAR JOBS DE PIPELINE
+
