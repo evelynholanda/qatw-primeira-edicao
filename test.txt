@@ -31,3 +31,4 @@ Não utilizaremos este serviço
 - ENTRAR http://jenkins-server:8080
 - CRIAR JOBS DE PIPELINE
 
+8- CRIAR ARQUIVO Jenkinsfile com o script de pipeline e subir projeto no github
