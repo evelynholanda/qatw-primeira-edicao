@@ -49,3 +49,12 @@ Não utilizaremos este serviço
 9- IR JO KENKINS E RODAR O JOB
 - FALHA POIS PRECISA DA IMAGEM docker pull mcr.microsoft.com/playwright:v1.51.1-noble
 
+10- REPORT
+- INSTALAR PLUGIN ALLURE NO JENKINS
+- INSTALAR PROJETO, npm install -D allure-playwright
+- TROCAR CONFIG.js  reporter: 'allure-playwright',
+- instalar linha comando   reporter: 'allure-playwright',
+- npx allure serve
+- acrescentar no .gitigone allure-results
+- instalar instrução do jenkins
+allure includeProperties: false, jdk: '', results: [[path: 'allure-results']] e coloca na pipeline depois do test

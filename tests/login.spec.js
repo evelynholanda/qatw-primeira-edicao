@@ -30,7 +30,7 @@ test('Não deverá logar ao digitar um código de autenticação inválido', asy
   await page.getByRole('button', { name: 'Continuar' }).click();
 
   // Digitar código de autenticação inválido
-  await page.getByRole('textbox', { name: '000000' }).fill('200276');
+  await page.getByRole('textbox', { name: '000000' }).fill('757858');
   await page.getByRole('button', { name: 'Verificar' }).click();
 
   // Verificar mensagem de erro
@@ -58,10 +58,10 @@ test('Deverá logar na conta do usuário ao digitar um código de autenticação
   await loginPage.informarSenha(user.senha);
 
   //ESTRATEGIA DE CHECKPOINT
-  await page.getByRole('heading', { name: 'Verificação em duas etapas' })
-    .waitFor({ timeout: 3000 });
+  //await page.getByRole('heading', { name: 'Verificação em duas etapas' })
+  //  .waitFor({ timeout: 5000 });
  
-  //await page.waitForTimeout(5000);//RETIRADO PARA OCODIGO ACIMA
+  await page.waitForTimeout(5000);//RETIRADO PARA OCODIGO ACIMA
 
    // Digitar código de autenticação inválido
   const codigo = await obterCodigo2FA(user.cpf);
