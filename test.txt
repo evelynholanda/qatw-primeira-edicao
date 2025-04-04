@@ -15,6 +15,20 @@ docker compose down
 - fazer configuração e criar a função do select, delete, insert etc...
 - abrir PGAdmin e fazer as configurações do banco que estao no docker compose
 
+QUERY POR USUARIO
+SELECT t.code
+	    FROM public."TwoFactorCode" t
+		JOIN public."User" u ON u."id" = t."userId"
+		WHERE u."cpf" = '${cpf}'
+	    ORDER BY t.id DESC
+	    LIMIT 1;
+
+QUERY ULTIMO AUTENTICADOR
+SELECT code
+FROM public."TwoFactorCode"
+ORDER BY id DESC
+LIMIT 1;
+
 4-Rodar testes
 npx playwright test --ui
 
@@ -32,3 +46,6 @@ Não utilizaremos este serviço
 - CRIAR JOBS DE PIPELINE
 
 8- CRIAR ARQUIVO Jenkinsfile com o script de pipeline e subir projeto no github
+9- IR JO KENKINS E RODAR O JOB
+- FALHA POIS PRECISA DA IMAGEM docker pull mcr.microsoft.com/playwright:v1.51.1-noble
+
